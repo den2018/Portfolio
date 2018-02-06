@@ -5,4 +5,17 @@ $(document).ready(function() {
 	highlightSelector:"nav a"
 	});
 
+	//mixItUp2 - фильтрация работ в портфолио 
+	$('#portfolio-project').mixItUp();
+
+	//FancyBox - galery
+	$(".fancybox").fancybox({
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
+	// End of FancyBox - galery
+
 });
