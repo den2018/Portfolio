@@ -274,7 +274,7 @@
 	 				<img src="usercontent/img/project_auto.jpg" alt="Промо сайт автомобиля">
 	 			</div>
 	 			<div class="portfolio-item__title">
-	 				<a href="#">Промо сайт автомобиля</a>
+	 				<a href="https://www.google.ru" target="_blank">Промо сайт автомобиля</a>
 	 			</div>
 	 			<div class="portfolio-item__description">
 					Верстка сайта для презентации концепта автомобиля.
@@ -294,7 +294,7 @@
 	 				<img src="usercontent/img/project_moto.jpg" alt="Магазин мотоциклов">
 	 			</div>
 	 			<div class="portfolio-item__title">
-	 				<a href="#">Магазин мотоциклов</a>
+	 				<a href="https://www.google.ru" target="_blank">Магазин мотоциклов</a>
 	 			</div>
 	 			<div class="portfolio-item__description">
 					Верстка лендинга для компании Indian Motorcycles.
@@ -314,7 +314,7 @@
 	 				<img src="usercontent/img/project_music.jpg" alt="Магазин аудиотехники">
 	 			</div>
 	 			<div class="portfolio-item__title">
-	 				<a href="#">Магазин аудиотехники</a>
+	 				<a href="https://www.google.ru" target="_blank">Магазин аудиотехники</a>
 	 			</div>
 	 			<div class="portfolio-item__description">
 					Верстка страниц для магазина винтажной аудиотехники.
@@ -414,7 +414,6 @@
 							</li>
 						</ul>
 				<!-- // social network  -->
-
 			</div>
 			<!-- //Contacts-Text  -->
 			
@@ -422,18 +421,25 @@
 			<div class="col-sm-6 col-lg-6">
 				<div class="heading heading--white heading--medium heading--padding-top">Связаться со мной</div>
 
-				<form id="contact-form" class="contact-form" action="" method="POST">
-					<input type="text" class="contact-form_input" name="name" placeholder="Имя">
-					<input type="text" class="contact-form_input" name="email" placeholder="Email" required>
+				<form id="contact-form" class="contact-form">
+				<!-- Hidden Required Fields  -->
+				<input type="hidden" name="project_name" value="Мой персональный сайт">
+				<input type="hidden" name="admin_email" value="kdb2015@mail.ru">
+				<input type="hidden" name="form_subject" value="Сообщение с сайта">
+				<!-- //Hidden Required Fields  --> 
+				
+					<input type="text" class="contact-form__input" name="name" placeholder="Имя">
+					<input type="text" class="contact-form__input" name="email" placeholder="Email" required>
 					<div class="clearfix">
-						<input type="text" class="contact-form_input contact-form_input--half-width" name="skype" placeholder="Skype">
-						<input type="text" class="contact-form_input contact-form_input--half-width" name="phone" placeholder="Телефон">
+						<input type="text" class="contact-form__input contact-form__input--half-width" name="skype" placeholder="Skype">
+						<input type="text" class="contact-form__input contact-form__input--half-width" name="phone" placeholder="Телефон">
 					</div>
 					<div class="contact-form__bg-pencil">
-						<textarea class="contact-form_textarea" name="message" id=""></textarea>
+						<textarea class="contact-form__textarea" name="message" id=""></textarea>
 					</div>
-					<input class="contact-form_submit" type="submit" value="Отправить ">
+					<input class="contact-form__submit" type="submit" value="Отправить">
 				</form>
+				<div id="answer"></div>
 			</div>
 			<!-- Form  -->
 		</div>
@@ -444,7 +450,12 @@
 <!-- footer  -->
 <div class="footer">
 	<div class="container">
-		<p class="footer__label">&copy; 2018 Курило Денис</p>
+		<p class="footer__label">
+		 <?php
+         $copyrightYear = 2017;
+         $currentYear = date('Y');
+         echo $copyrightYear. (($copyrightYear != $currentYear) ? ' &ndash; '. $currentYear: '');    
+            ?> &copy; Курило Денис</p>
 		<p>Веб-разработик, занимаюсь версткой и созданием сайтов.</p>
 		<p>Этот сайт сделал в рамках прохождения обучения по верстке на курсах от <a href="http://webcademy.ru" target="_blank">WebCademy.ru</a></p>
 	</div>

@@ -1,6 +1,7 @@
+/*  navigation-icon  */
 .cmn-toggle-switch {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 23px;
   right: 16px;
   overflow: hidden;
@@ -37,7 +38,7 @@
   left: 5px;
   right: 5px;
   height: 5px;
-  background: white;
+  background-color: @yellow;
 }
  
 .cmn-toggle-switch span::before,
@@ -47,7 +48,7 @@
   left: 0;
   width: 100%; 
   height: 5px;
-  background-color: #fff;
+  background-color: @yellow;
   content: "";
 }
  
@@ -59,9 +60,7 @@
   bottom: -12px;
 }
 
-
 /* Animation */
-
 
 .cmn-toggle-switch__htx {
   //background-color: #ff3264;
@@ -120,3 +119,4 @@
   -webkit-transition-delay: 0, 0.3s;
           transition-delay: 0, 0.3s;
 }
+/*  //navigation-icon  */
